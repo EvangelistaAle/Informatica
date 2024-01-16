@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="Numeri" id="inputNumeri">
+<button onclick="printNumeri()">Stampa i numeri</button>
+<p id="output3"></p>
+<p id="output10percentuale"></p>
+
+<script>
+function printNumeri() {
+  let input = document.getElementById("inputNumeri").value;
+  let output = "";
+  for (let i = 1; i <= input; i++) {
+    output += i + " ";
+  }
+  document.getElementById("output3").innerHTML = output;
+  document.getElementById("output10percentuale").innerHTML = "10%:" + input*0.1;
+}
+</script>
+
+</body>
+</html>
