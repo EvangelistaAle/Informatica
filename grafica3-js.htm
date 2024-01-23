@@ -7,6 +7,9 @@
 			height: 10px;
 			margin: 2px;
 			display: inline-block;
+			text-align: center;
+			line-height: 10px;
+			font-size: 8px;
 		}
 		.light-gray {
 			background-color: #828282;
@@ -22,9 +25,9 @@
 			<script>
 				for (let i = 1; i <= 100; i++) {
 					if (i % 2 === 0) {
-						document.write('<div class="square light-gray"></div>');
+						document.write('<div class="square light-gray">' + i + '</div>');
 					} else {
-						document.write('<div class="square dark-gray"></div>');
+						document.write('<div class="square dark-gray">' + i + '</div>');
 					}
 					if (i % 10 === 0) {
 						document.write('<br>');
@@ -35,3 +38,4 @@
 	</table>
 </body>
 </html>
+					
