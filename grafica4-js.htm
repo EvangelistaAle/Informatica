@@ -20,19 +20,30 @@
   </style>
 </head>
 <body>
+  <p>Counter: <span id="counter">0</span></p>
   <table>
     <tbody>
       <script>
         for (let i = 1; i <= 100; i++) {
           if (i % 2 === 0) {
-            document.write('<div class="square light-gray">' + ((Math.floor(Math.random() * 2) === 1) ? '<img src="palla.jpg" alt="image1"height="8px" width="8px">' : '<img src="pizza.jpg" alt="image2"height="8px" width="8px">') + '</div>');
+            document.write('<div class="square light-gray"><img src="palla.jpg" alt="image1" height="8px" width="8px" onclick="incrementCounter()"></div>');
           } else {
-            document.write('<div class="square dark-gray">' + ((Math.floor(Math.random() * 2) === 1) ? '<img src="palla.jpg" alt="image1 height="8px" width="8px" >' : '<img src="pizza.jpg" height="8px" width="8px" alt="image2">') + '</div>');
+            document.write('<div class="square dark-gray"><img src="pizza.jpg" alt="image2" height="8px" width="8px" onclick="incrementCounter()"></div>');
           }
           if (i % 10 === 0) {
             document.write('<br>');
           }
         }
+   
+function incrementCounter() {
+  var counter = document.getElementById('counter');
+  counter.innerText = parseInt(counter.innerText) + 1;
+}
+
+
+
+
+
       </script>
     </tbody>
   </table>
