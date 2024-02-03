@@ -1,1 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Images with Click Count</title>
+</head>
+<body>
+    <div>
+        <img src="image1.jpg" id="img1" onclick="clickCount('img1')">
+    </div>
+    <div>
+        <img src="image2.jpg" id="img2" onclick="clickCount('img2')">
+    </div>
 
+    <script>
+        let count = {
+            img1: 0,
+            img2: 0
+        };
+
+        function clickCount(imgId) {
+            count[imgId]++;
+            console.log("Clicked " + count[imgId] + " times on " + imgId);
+
+        }
+
+let board = [];
+for (let i = 0; i < 10; i++) {
+  board.push(Array(10).fill(0));
+}
+
+    </script>
+</body>
+</html>
