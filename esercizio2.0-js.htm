@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<label>Inserisci un numero:</label>
+<input type="number" id="numero" name="numero" min="0" max="100">
+<br> <br>
+<button onclick="increaseValue1()">Button 1</button>
+<button onclick="increaseValue2()">Button 2</button>
+<button onclick="increaseValue3()">Button 3</button>
+<p id="output"></p>
+
+<script>
+
+let x=0;
+let y=0;
+let z=0;
+let num=0;
+
+function increaseValue1(){
+  if(x==0)
+  {
+   num = parseFloat(document.getElementById("numero").value);
+   num += 2;
+  z=0;
+  y=0;
+  x++;
+  }else{
+  num += 2;}
+  document.getElementById("output").innerText = num;
+}
+function increaseValue2(){
+  if(y==0)
+  {
+   num = parseFloat(document.getElementById("numero").value);
+   num += 3;
+  z=0;
+  x=0;
+  y++;
+  }else{
+  num += 3;}
+  document.getElementById("output").innerText = num;
+}
+function increaseValue3(){
+  if(z==0)
+  {
+   num = parseFloat(document.getElementById("numero").value);
+   num += 7;
+  x=0;
+  y=0;
+  z++;
+  }else{
+  num += 7;}
+  document.getElementById("output").innerText = num;
+}
+</script>
+</body>
+</html>
