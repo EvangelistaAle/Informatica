@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Array1</title>
+</head>
+<body>
+<p id="out"></p>
+<div>
+    <button id="b1" onclick="AddElementArray()">Ordina un prodotto</button>
+    <button id="b2" onclick="DeleteLastElement()">Cancella l'ultimo elemento</button>
+    <button id="b3" onclick="CountElements()">Conta elementi</button>
+    <button id="b4" onclick="InsertElement()">Inserisci un elemento</button>
+    <p id="fruitsOut"></p>
+    <button onclick="DisplayDrinks()">Mostra drinks </button>
+    <p id="drinksOut"></p>
+    <button onclick="DisplayOrders()">Mostra numero ordini</button>
+    <p id="ordersOut"></p>
+</div>
+<script>
+    let a = "Variabile test";
+    document.getElementById("out").innerHTML = a;
+    let fruits = ["Orange", "Apple", "Strawberry", "Pear", "Mango", "Kiwi"];
+    document.getElementById("fruitsOut").innerHTML = fruits;
+    let drinks = ["Coffee", "Tea", "Water", "Juice"];
+    let orders = [0, 0, 0, 0];
+    function DisplayDrinks() {
+        document.getElementById("drinksOut").innerHTML = drinks;
+    }
+    function DisplayOrders() {
+        document.getElementById("ordersOut").innerHTML = orders;
+    }
+    function AddElementArray() {
+        let nuovoElemento = prompt("Inserisci un frutto");
+        fruits.push(nuovoElemento);
+        document.getElementById("fruitsOut").innerHTML = fruits;
+    }
+    function DeleteLastElement() {
+        fruits.pop();
+        document.getElementById("fruitsOut").innerHTML = fruits;
+    }
+    function CountElements() {
+        alert("Numero di elementi nell'array: " + fruits.length);
+    }
+    function InsertElement() {
+        let pos = parseInt(prompt("Inserisci la posizione in cui vuoi inserire l'elemento"));
+        let nuovoElemento = prompt("Inserisci il nuovo frutto da inserire");
+        fruits.splice(pos, 0, nuovoElemento);
+        document.getElementById("fruitsOut").innerHTML = fruits;
+    }
+</script>
+</body>
+</html>
