@@ -1,0 +1,33 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generatore di Frasi</title>
+    <style>
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="aggiungiSoggetto">Aggiungi Soggetto</button>
+    <button id="aggiungiVerbo">Aggiungi Verbo</button>
+    <button id="aggiungiComplemento">Aggiungi Complemento</button>
+    <button id="creaFraseSingola">Crea Frase Singola</button>
+    <button id="creaFraseCasuale">Crea Frase Casuale</button>
+
+    <div id="output"></div>
+
+    <script>
+        const soggetti = [];
+        const verbi = [];
+        const complementi = [];
+
+        const outputDiv = document.getElementById('output');
+        const aggiungiSoggettoBtn = document.getElementById('aggiungiSoggetto');
+        const aggiungiVerboBtn = document.getElementById('aggiungiVerbo');
+        const aggiungiComplementoBtn = document.getElementById('aggiungiComplemento');
