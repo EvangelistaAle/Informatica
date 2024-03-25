@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generatore di Frasi Casuale</title>
+    <style>
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <button onclick="creaFraseCasuale()">Crea Frase Casuale</button>
+
+    <div id="output"></div>
+
+    <script>
+        const soggetti = ["Il gatto", "Il cane", "La ragazza", "Il ragazzo"];
+        const verbi = ["mangia", "beve", "corre", "dorme"];
+        const complementi = ["sul tappeto", "nel parco", "nella foresta", "sul letto"];
+
+        const outputDiv = document.getElementById('output')
+
+        function creaFraseCasuale() {
+            const soggettoCasuale = getRandomElement(soggetti);
+            const verboCasuale = getRandomElement(verbi);
+            const complementoCasuale = getRandomElement(complementi);
+
+            const fraseCasuale = `${soggettoCasuale} ${verboCasuale} ${complementoCasuale}.`;
+            outputDiv.textContent = fraseCasuale;
+        }
+
+        function getRandomElement(array) {
+            return array[Math.floor(Math.random() * array.length)];
+        }
+    </script>
+</body>
+</html>
