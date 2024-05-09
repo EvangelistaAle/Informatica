@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<div style="display: flex;">
+    <script>
+        function isPrime(num) {
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) {
+                    return false;
+                }
+            }
+            return num > 1;
+        }
+
+        let numbersArray = Array.from({ length: 1000 }, (_, index) => index + 1000);
+
+        numbersArray.forEach(num => {
+            let square = document.createElement('div');
+            square.textContent = num;
+
+            if (num % 2 === 0) {
+                square.style.backgroundColor = "darkred";
+            } else {
+                square.style.backgroundColor = "lightblue";
+            }
+
+            if (num % 7 === 0) {
+                square.style.backgroundColor = "lightcoral";
+            }
+
+            if (isPrime(num)) {
+                square.style.backgroundColor = "yellow";
+            }
+
+            document.body.appendChild(square);
+        });
+    </script>
+</div>
+
+</body>
+</html>
