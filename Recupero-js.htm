@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        const n = parseInt(prompt("Enter a number:"));
+        const body = document.querySelector('body');
+
+        for(let i = 0; i < n; i++) {
+          const square = document.createElement('div');
+          square.style.width = '100px';
+          square.style.height = '100px';
+          square.style.display = 'inline-block';
+          square.style.margin = '5px';
+          const randomNumber = Math.floor(Math.random() * (200 - 100 + 1) + 100);
+          square.textContent = randomNumber;
+          
+          if(randomNumber % 10 === 0) {
+            square.style.backgroundColor = 'blue';
+          }
+
+          body.appendChild(square);
+        }
+      });
+    </script>
+</body>
+</html>
